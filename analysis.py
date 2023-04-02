@@ -26,15 +26,14 @@ iris_versicolor=data.loc[data["class"]=="Iris-versicolor"]
 
 #2. Saves a histogram of each variable to png files
 def histogram(pos, title, colname):
-    plt.subplot(2,2,pos)
+    plt.subplot(2, 2, pos)
     plt.title(title)
-    ltitle=title.lower()
-    plt.xlabel(f'{ltitle} in cm')
+    plt.xlabel(f'{title.lower()} in cm')
     plt.ylabel("number of samples")
-    plt.hist(data[colname], color='paleturquoise', edgecolor='blue')
-    plt.hist(iris_setosa[colname], color='lightcoral', edgecolor='red')
-    plt.hist(iris_virginica[colname], color='cornflowerblue', edgecolor='red')
-    plt.hist(iris_versicolor[colname], color='plum', edgecolor='red')
+    plt.hist(data[colname],            color='paleturquoise',  edgecolor='blue')
+    plt.hist(iris_setosa[colname],     color='lightcoral',     edgecolor='red')
+    plt.hist(iris_virginica[colname],  color='cornflowerblue', edgecolor='red')
+    plt.hist(iris_versicolor[colname], color='plum',           edgecolor='red')
 
 fig=plt.figure()
 #https://stackoverflow.com/questions/31726643/how-to-plot-in-multiple-subplots
