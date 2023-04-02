@@ -11,59 +11,37 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-col=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
+
+col_sl="sepal_length"
+col_sw="sepal_width"
+col_pl="petal_length"
+col_pw="petal_width"
+
+col=[col_sl, col_sw, col_pl, col_pw, 'class']
 data=pd.read_csv('iris.data', names=col)
 
 iris_setosa=data.loc[data["class"]=="Iris-setosa"]
 iris_virginica=data.loc[data["class"]=="Iris-virginica"]
 iris_versicolor=data.loc[data["class"]=="Iris-versicolor"]
 
-col_sl=("sepal_length")
-col_sw=("sepal_width")
-col_pl=("petal_length")
-col_pw=("petal_width")
-
-
-
 #2. Saves a histogram of each variable to png files
+def histogram(pos, title, colname):
+    plt.subplot(2,2,pos)
+    plt.title(title)
+    ltitle=title.lower()
+    plt.xlabel(f'{ltitle} in cm')
+    plt.ylabel("number of samples")
+    plt.hist(data[colname], color='paleturquoise', edgecolor='blue')
+    plt.hist(iris_setosa[colname], color='lightcoral', edgecolor='red')
+    plt.hist(iris_virginica[colname], color='cornflowerblue', edgecolor='red')
+    plt.hist(iris_versicolor[colname], color='plum', edgecolor='red')
+
 fig=plt.figure()
 #https://stackoverflow.com/questions/31726643/how-to-plot-in-multiple-subplots
-
-plt.subplot(2,2,1)
-plt.title("SEPAL LENGTH")
-plt.xlabel("sepal length in cm")
-plt.ylabel("number of samples")
-plt.hist(data[col_sl], color='paleturquoise', edgecolor='blue')
-plt.hist(iris_setosa[col_sl], color='lightcoral', edgecolor='red')
-plt.hist(iris_virginica[col_sl], color='cornflowerblue', edgecolor='red')
-plt.hist(iris_versicolor[col_sl], color='plum', edgecolor='red')
-         
-plt.subplot(2,2,2)
-plt.title("SEPAL WIDTH")
-plt.xlabel("sepal width in cm")
-plt.ylabel("number of samples")
-plt.hist(data[col_sw], color='paleturquoise', edgecolor='blue')
-plt.hist(iris_setosa[col_sw], color='lightcoral', edgecolor='red')
-plt.hist(iris_virginica[col_sw], color='cornflowerblue', edgecolor='red')
-plt.hist(iris_versicolor[col_sw], color='plum', edgecolor='red')
-
-plt.subplot(2,2,3)
-plt.title("PETAL LENGTH")
-plt.xlabel("petal length in cm")
-plt.ylabel("number of samples")
-plt.hist(data[col_pl], color='paleturquoise', edgecolor='blue')
-plt.hist(iris_setosa[col_pl], color='lightcoral', edgecolor='red')
-plt.hist(iris_virginica[col_pl], color='cornflowerblue', edgecolor='red')
-plt.hist(iris_versicolor[col_pl], color='plum', edgecolor='red')
-
-plt.subplot(2,2,4)
-plt.title("PETAL WIDTH")
-plt.xlabel("petal width in cm")
-plt.ylabel("number of samples")
-plt.hist(data[col_pw], color='paleturquoise', edgecolor='blue')
-plt.hist(iris_setosa[col_pw], color='lightcoral', edgecolor='red')
-plt.hist(iris_virginica[col_pw], color='cornflowerblue', edgecolor='red')
-plt.hist(iris_versicolor[col_pw], color='plum', edgecolor='red')
+histogram(1, "SEPAL LENGTH", col_sl)
+histogram(2, "SEPAL WIDTH",  col_sw)
+histogram(3, "PETAL LENGTH", col_pl)
+histogram(4, "PETAL WIDTH",  col_pw)
 
 #https://www.pythonpool.com/matplotlib-subplot-spacing
 plt.subplots_adjust(left=0.1, 
@@ -127,4 +105,5 @@ plt.figlegend(["iris setosa", "iris virginica", "iris versicolor"], loc="center"
 plt.suptitle('IRIS SCATTER PLOT OF EACH PAIR OF VARIABLES')
 
 plt.close(fig)
+
 plt.show()
