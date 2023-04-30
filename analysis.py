@@ -24,6 +24,15 @@ iris_setosa=data.loc[data["class"]=="Iris-setosa"]
 iris_virginica=data.loc[data["class"]=="Iris-virginica"]
 iris_versicolor=data.loc[data["class"]=="Iris-versicolor"]
 
+#1.Outputs a summary of each variable (min, max, median, mean ) to a single text file
+#https://learnpython.com/blog/how-to-summarize-data-in-python/
+#https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
+
+with open("Summary of variables.txt", "a") as f:
+    print (data[[col_sl, col_sw, col_pl, col_pw]].apply(["max", "min", "mean", "median"]), file=f)
+
+
+
 #2. Saves a histogram of each variable to png files
 def histogram(pos, title, colname):
     plt.subplot(2, 2, pos)
@@ -57,42 +66,22 @@ plt.savefig('Iris_var_hist.png')
 
 #3. Outputs a scatter plot of each pair of variables
 
+def scatter(pos, colname_x, colname_y):
+    plt.subplot(2, 2, pos)
+    plt.title(f'{colname_x} V {colname_y}')
+    plt.xlabel(f'{colname_x.lower()} in cm')
+    plt.ylabel(f'{colname_y.lower()} in cm')
+    plt.scatter(iris_setosa[colname_x],     iris_setosa[colname_y],     color='lightcoral',     edgecolor='red')
+    plt.scatter(iris_virginica[colname_x],  iris_virginica[colname_y],  color='cornflowerblue', edgecolor='blue')
+    plt.scatter(iris_versicolor[colname_x], iris_versicolor[colname_y], color='plum',           edgecolor='purple')
+    plt.grid()
+
 fig2=plt.figure()
-plt.subplot(2,2,1)
-plt.scatter(iris_setosa[col_sl],iris_setosa[col_sw],color='lightcoral')
-plt.scatter(iris_virginica[col_sl],iris_virginica[col_sw],color='cornflowerblue')
-plt.scatter(iris_versicolor[col_sl],iris_versicolor[col_sw],color='plum')
-plt.title("SEPAL LENGTH V SEPAL WIDTH")
-plt.xlabel("sepal length in cm")
-plt.ylabel("sepal width in cm")
-plt.grid()
 
-plt.subplot(2,2,2)
-plt.scatter(iris_setosa[col_pl],iris_setosa[col_pw],color='lightcoral')
-plt.scatter(iris_virginica[col_pl],iris_virginica[col_pw],color='cornflowerblue')
-plt.scatter(iris_versicolor[col_pl],iris_versicolor[col_pw],color='plum')
-plt.title("PETAL LENGTH V PETAL WIDTH")
-plt.xlabel("petal length in cm")
-plt.ylabel("petal width in cm")
-plt.grid()
-
-plt.subplot(2,2,3)
-plt.scatter(iris_setosa[col_pw],iris_setosa[col_sw],color='lightcoral')
-plt.scatter(iris_virginica[col_pw],iris_virginica[col_sw],color='cornflowerblue')
-plt.scatter(iris_versicolor[col_pw],iris_versicolor[col_sw],color='plum')
-plt.title("PETAL WIDTH V SEPAL WIDTH")
-plt.xlabel("petal width in cm")
-plt.ylabel("sepal width in cm")
-plt.grid()
-
-plt.subplot(2,2,4)
-plt.scatter(iris_setosa[col_pl],iris_setosa[col_sl],color='lightcoral')
-plt.scatter(iris_virginica[col_pl],iris_virginica[col_sl],color='cornflowerblue')
-plt.scatter(iris_versicolor[col_pl],iris_versicolor[col_sl],color='plum')
-plt.title("PETAL LENGTH V SEPAL LENGTH")
-plt.xlabel("petal length in cm")
-plt.ylabel("sepal length in cm")
-plt.grid()
+scatter(1, "sepal_length", "sepal_width")
+scatter(2, "petal_length", "petal_width")
+scatter(3, "petal_width", "sepal_width")
+scatter(4, "petal_length", "sepal_length")
 
 plt.subplots_adjust(left=0.1, 
                     bottom=0.1,  
@@ -102,7 +91,5 @@ plt.subplots_adjust(left=0.1,
                     hspace=1.3)
 plt.figlegend(["iris setosa", "iris virginica", "iris versicolor"], loc="center")
 plt.suptitle('IRIS SCATTER PLOT OF EACH PAIR OF VARIABLES')
-
-plt.close(fig)
 
 plt.show()
