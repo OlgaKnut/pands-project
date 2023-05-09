@@ -14,6 +14,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 col_sl="sepal_length"
 col_sw="sepal_width"
 col_pl="petal_length"
@@ -96,7 +97,9 @@ def show_scatter():
     plt.show()
 
 """
-# other way of getting scatter plot of each pair of variables. it is represenitg all possible combination of pairs but looks too overcrouded to me with duplication of same pairs where variables just positioned on different axes.
+# other way of getting scatter plot of each pair of variables. 
+#it is represenitg all possible combination of pairs 
+#but looks too overcrouded to me with duplication of same pairs where variables just positioned on different axes.
 from pandas.plotting import scatter_matrix
 # scatter plot matrix
 scatter_matrix(iris_all,figsize=(10,10))
