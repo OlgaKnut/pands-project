@@ -37,9 +37,9 @@ The one used in this project was taken from UCI Machine Learning Repository [1]
 
 The dataset has 150 records and five attributes: sepal length, sepal width, petal length, petal width and species.
 
-<img src="https://www.math.umd.edu/~petersd/666/html/iris_with_labels.jpg" width="200" height="200"/>
+<img src="https://user-images.githubusercontent.com/123666667/237219678-2e0e07f2-509c-405e-b37b-c02e802bd1a2.png" width="200" height="200"/>
 
-Each of three represented species (Setosa, Virginica and Versicolor) has equal number of records - 50 this makes this data balanced. 
+### Each of three represented species (Setosa, Virginica and Versicolor) has equal number of records - 50 this makes this data balanced. 
 
 # Analysis
 
