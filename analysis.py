@@ -1,7 +1,7 @@
 # analysis.py
 # Author: Olga Knutva
 # Description: 1. Outputs a summary of each variable to a single text file, 
-#               2. Saves a histogram of each variable to png files, and 
+#               2. Saves a histogram of each variable to png files, and https://user-images.githubusercontent.com/123666667/237202380-65147be2-dd8f-4cbe-ac05-2878816b856c.jpg
 #               3. Outputs a scatter plot of each pair of variables. 
 #               4. Other analysis:
 #                    4.1 heatmap
@@ -26,6 +26,9 @@ iris_all=pd.read_csv('iris.data', names=col)
 iris_setosa=iris_all.loc[iris_all["class"]=="Iris-setosa"]
 iris_virginica=iris_all.loc[iris_all["class"]=="Iris-virginica"]
 iris_versicolor=iris_all.loc[iris_all["class"]=="Iris-versicolor"]
+
+
+
 
 # 1.Outputs a summary of each variable (min, max, median, mean ) to a single text file
 #https://learnpython.com/blog/how-to-summarize-data-in-python/
