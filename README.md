@@ -8,7 +8,7 @@
 #
 
 ## Project objectives:
-### 1. Research the Fisher's Iris data set [1] online and write a summary about it. 
+### 1. Research the Fisher's Iris data set online and write a summary about it. 
 ### 2. Usinf Python write a program called analysis.py. This programm should perfom analysis of Iris data set and output results in varios formats. 
 ### 3. Discuss results of performed analysis
 #
@@ -26,12 +26,14 @@
 
 <img src="https://user-images.githubusercontent.com/123666667/237202380-65147be2-dd8f-4cbe-ac05-2878816b856c.jpg" width="200" height="200"/>
 
-## History
- The Iris flower data set also known as Fisher's Iris data set or Anderson's Iris data set was collected by Edgard Anderson in 1935 and become famous after Ronald Fisher's publication in 1936 "The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis."
+## History 
+##### [10]
+The Iris flower data set also known as Fisher's Iris data set or Anderson's Iris data set was collected by Edgard Anderson in 1935 and become famous after Ronald Fisher's publication in 1936 "The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis."
 
  Iris data set is popular choise for beginers data analytics to practise varios methods.
 #
-## Structure
+## Structure 
+##### [11]
 Several varations of Iris dataset can be found, due to published errors.
 The one used in this project was taken from UCI Machine Learning Repository [1] 
 
@@ -42,11 +44,12 @@ The dataset has 150 records and five attributes: sepal length, sepal width, peta
 Each of three represented species (Setosa, Virginica and Versicolor) has equal number of records - 50 this makes this dataset balanced. 
 
 ## Analysis
-
- In this project we use Python to analyse Iris data set. A few libraryes were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
+##### [2, 7, 8, 9]
+In this project we use Python to analyse Iris data set. A few libraryes were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
 
  
-###     1 Summary of each variable (*saved to a single text file*) 
+###     1 Summary of each variable (*saved to a single text file*)
+##### [3, 4] 
 <img src="https://user-images.githubusercontent.com/123666667/237216963-23b3fad0-7d37-4b73-ad00-a5087579d80b.png" width="400" height="100"/>
 
 
@@ -54,7 +57,7 @@ Here we can see maximum, minimum, mean (average) and median (middle) value of ea
 
 
 ###     2 Histogram of each variable (*saved to png file*) 
-
+##### [5, 6]
 Histogram visualise how often each value appearse in a dataset
 
 <img src="https://user-images.githubusercontent.com/123666667/237216112-3450d9b2-6084-4f75-bacb-abc92d5017c3.png" width="400" height="400"/>
@@ -100,27 +103,25 @@ It is very cleare from this plot that Iris virginica is largest of three species
 ## Conclusion
 
 # References
- 
-#### [1] UC Irvine Machine Learning Repository. Iris data set. 
-#### UCI Machine Learning Repository: Iris Data Set
-#### http://archive.ics.uci.edu/ml/datasets/Iris
 
+#### [1] [UC Irvine Machine Learning Repository. Iris data set.](http://archive.ics.uci.edu/ml/datasets/Iris)
 
-#### [2] https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
+#### [2] [Exploratory Data Analysis of IRIS Data Set Using Python](https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d)
 
-#### [3] https://learnpython.com/blog/how-to-summarize-data-in-python/
-#### [4] https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file
+#### [3] [How to Generate a Data Summary in Python](https://learnpython.com/blog/how-to-summarize-data-in-python/)
 
-#### [5] https://stackoverflow.com/questions/31726643/how-to-plot-in-multiple-subplots
+#### [4] [Directing print output to a .txt file](https://stackoverflow.com/questions/36571560/directing-print-output-to-a-txt-file)
 
-#### [6] https://www.pythonpool.com/matplotlib-subplot-spacing
+#### [5] [How to plot in multiple subplots](https://stackoverflow.com/questions/31726643/how-to-plot-in-multiple-subplots)
 
-#### [7] https://www.kaggle.com/code/adityabhat24/iris-data-analysis-and-machine-learning-python
+#### [6] [Matplotlib Subplot Spacing: 4 Different Approaches](https://www.pythonpool.com/matplotlib-subplot-spacing)
 
-#### [8] https://towardsdatascience.com/classification-basics-walk-through-with-the-iris-data-set-d46b0331bf82
+#### [7] [Iris Data Analysis and Machine Learning(Python)](https://www.kaggle.com/code/adityabhat24/iris-data-analysis-and-machine-learning-python)
 
-#### [9] https://medium.com/@rishav.jnit/exploratory-data-analysis-eda-on-iris-dataset-using-python-cadd850c1fc6
+#### [8] [Classification Basics: Walk-through with the Iris Data Set](https://towardsdatascience.com/classification-basics-walk-through-with-the-iris-data-set-d46b0331bf82)
 
-#### [10] https://en.wikipedia.org/wiki/Iris_flower_data_set
+#### [9] [Exploratory data analysis (EDA) on Iris Dataset using Python](https://medium.com/@rishav.jnit/exploratory-data-analysis-eda-on-iris-dataset-using-python-cadd850c1fc6)
 
-#### [11] https://ieeexplore.ieee.org/document/771092
+#### [10] [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+
+#### [11] [Will the real iris data please stand up?](https://ieeexplore.ieee.org/document/771092)
