@@ -52,7 +52,7 @@ Each of three represented species (Setosa, Virginica and Versicolor) has same nu
 
 ## Analysis
 ##### [2, 7, 8, 9]
-In this project we use Python to analyse Iris data set. A few libraryes were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
+In this project we use Python to analyse Iris dataset. A few libraryes were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
 
  
 ###     1 Summary of each variable (*saved to a single text file*)
@@ -60,7 +60,19 @@ In this project we use Python to analyse Iris data set. A few libraryes were use
 <img src="https://user-images.githubusercontent.com/123666667/237938937-585bb2bd-ce03-43c2-82eb-db45830f9f66.png" width="400" height="200"/>
 
 
-Here we can see  number of rows, mean (average), standart deviation, minimum, 25%, 50% (median), 75% (values on positions corresponding to lower quarter, middle and upper quarter) and maximum value of each variable of dataset.
+Here we can see following values of each variable in dataset:
+
+number of rows- how many enties variable has;
+
+mean -average value of variable;
+
+standard deviation -typical distance between each point and mean- the smaler number the more consistent dataset;
+
+minimum - smalest value;
+
+25%, 50% (median), 75% - values on positions corresponding to lower quarter, middle and upper quarter;
+
+maximum - largest value.
 
 
 ###     2 Histogram of each variable (*saved to png file*) 
@@ -69,7 +81,7 @@ Histogram visualise how often each value appearse in a dataset
 
 <img src="https://user-images.githubusercontent.com/123666667/237216112-3450d9b2-6084-4f75-bacb-abc92d5017c3.png" width="400" height="400"/>
 
-We can see that there is an overlap between species in sepal mesurments. Petal mesurment a specialy petal length can be used to identify iris setosa.
+We can see that there is an overlap between species in sepal measurements. Petal measurements a specialy petal length can be used to identify Iris Setosa.
 
  
 ###     3 Scatter plot of each pair of variables
@@ -78,7 +90,7 @@ Scatter plot visualise relationship between two variables.
 
 <img src="https://user-images.githubusercontent.com/123666667/237209230-f863ab0a-ee60-4a3b-818f-ea6cec3bad92.png" width="400" height="400"/>
 
-Here again we can confirm that petal mesurments are seutible for separating iris senosa from other two species. Also it is possible to classify iris virginica and iris versicolor basd in petal size but with some lever of overlaping. 
+Here again we can confirm that petal measurements are seutible for separating Iris Setosa from other two species. Also it is possible to classify Iris Virginica and Iris Versicolor basd in petal size but with some lever of overlaping. 
 #
 ###     4 Heatmap correlation coefficient of each pair of variables
 
@@ -94,8 +106,8 @@ It is value betwen 1 and -1
 
 
 Here is an example how you can jump to a wrong conclusion if you don't know the structure of your dataset.
-Looking at the heatmap of full Iris data set we can see negative correlation between some pairs of variables. so we can say that for example if petal length is increasing sepal width sould decrees as correlation index is -0.42.
-but if you look at the heatmap of each species separatly there is no negative correlation at all. so each mesurment will increas if one of the is increasing. Not all of them at the same rate.
+Looking at the heatmap of full Iris data set we can see negative correlation between some pairs of variables. We can say that for example if petal length is increasing sepal width sould decrees as correlation index is -0.42.
+but if you look at the heatmap of each species separatly there is no negative correlation at all. Each measurement will increas if one of the is increasing. Not all of them at the same rate.
 
 It is easier to understand how three positive values from each subset become a negative in a whole set if you look at the scatter plot of pairs of variables where you can notice different dinamycs in subsets and a set.
 
@@ -105,9 +117,10 @@ Box-and-whisker plot is visualising statistical summary of each variable. The bo
 
 <img src="https://user-images.githubusercontent.com/123666667/237213422-71967bb4-6f81-4d63-94cd-9062efc90904.png" width="400" height="400"/>
 
-It is very clear from this plot that Iris virginica is largest of three species exept one mesurment-sepal width.
+It is very clear from this plot that Iris Virginica is largest of three species exept one measurement-sepal width.
 
 ## Conclusion
+
 
 # References
 
