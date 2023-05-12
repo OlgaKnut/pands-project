@@ -14,7 +14,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
+#organising dataset
 col_sl="sepal_length"
 col_sw="sepal_width"
 col_pl="petal_length"
@@ -27,7 +27,13 @@ iris_setosa=iris_all.loc[iris_all["class"]=="Iris-setosa"]
 iris_virginica=iris_all.loc[iris_all["class"]=="Iris-virginica"]
 iris_versicolor=iris_all.loc[iris_all["class"]=="Iris-versicolor"]
 
+#knowing dataset
 
+print(iris_all.head())
+print ("------")
+print("shape:", iris_all.shape)
+print ("------")
+print(iris_all["class"].value_counts())
 
 
 # 1.Outputs a summary of each variable (min, max, median, mean ) to a single text file
@@ -36,7 +42,7 @@ iris_versicolor=iris_all.loc[iris_all["class"]=="Iris-versicolor"]
 
 def save_txt_summary():
     with open("Summary of variables.txt", "a") as f:
-        print (iris_all[[col_sl, col_sw, col_pl, col_pw]].apply(["max", "min", "mean", "median"]), file=f)
+        print(iris_all. describe(), file=f)
 
 #2. Saves a histogram of each variable to png files
 def histogram(pos, title, colname):
@@ -71,7 +77,6 @@ def save_png_histogram():
 
 
 #3. Outputs a scatter plot of each pair of variables
-
 def scatter(pos, colname_x, colname_y):
     plt.subplot(2, 2, pos)
     plt.title(f'{colname_x} V {colname_y}')
@@ -114,7 +119,8 @@ plt.show()
 
 # 4. Other analysis 
 
-#       4.1 Heat map https://towardsdatascience.com/classification-basics-walk-through-with-the-iris-data-set-d46b0331bf82
+#       4.1 Heat map 
+#       https://towardsdatascience.com/classification-basics-walk-through-with-the-iris-data-set-d46b0331bf82
 def heatmap(pos, data_set, title):
     plt.subplot(2, 2, pos )
     plt.title(title)
@@ -135,8 +141,8 @@ def show_heatmap():
 
     plt.show()
 
-#       4.2 Box-plot https://medium.com/@rishav.jnit/exploratory-data-analysis-eda-on-iris-dataset-using-python-cadd850c1fc6
-
+#       4.2 Box-plot 
+#       https://medium.com/@rishav.jnit/exploratory-data-analysis-eda-on-iris-dataset-using-python-cadd850c1fc6
 def box(pos, colname_y):
     plt.subplot(2, 2, pos)
     plt.title(colname_y.upper())
