@@ -1,7 +1,7 @@
 
 # **PANDS PROJECT**
 ### *This repository contains my project* 
-### *for Programming and Scriptind module* 
+### *for Programming and Scripting module* 
 ### *of Higher Diploma in Computing in Data Analytics course 2023* 
 ### *in Atlantic Technological University*
 #
@@ -9,7 +9,7 @@
 
 ## Project objectives:
 ### 1. Research the Fisher's Iris data set online and write a summary about it. 
-### 2. Usinf Python write a program called analysis.py. This programm should perfom analysis of Iris data set and output results in varios formats. 
+### 2. Using Python write a program called analysis.py. This program should perform analysis of Iris data set and output results in various formats. 
 ### 3. Discuss results of performed analysis
 #
 #
@@ -30,11 +30,11 @@
 ##### [10]
 The Iris flower dataset also known as Fisher's Iris dataset or Anderson's Iris dataset was collected by Edgard Anderson in 1935 and become famous after Ronald Fisher's publication in 1936 "The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis."
 
- Iris dataset is popular choise for beginers data analytics to practise varios methods of analysis and visualisation of data.
+ Iris dataset is popular choice for beginners data analytics to practise various methods of analysis and visualisation of data.
 #
 ## Structure 
 ##### [11]
-Several varations of Iris dataset can be found, due to publishing errors.
+Several variations of Iris dataset can be found, due to publishing errors.
 The one used in this project was taken from UCI Machine Learning Repository [1] 
 
 <img src="https://user-images.githubusercontent.com/123666667/237219678-2e0e07f2-509c-405e-b37b-c02e802bd1a2.png" width="200" height="200"/>
@@ -43,7 +43,7 @@ The one used in this project was taken from UCI Machine Learning Repository [1]
 
 <img src="https://user-images.githubusercontent.com/123666667/237949679-a3321617-8115-4922-b912-bad7e02fa808.png" width="400" height="200"/>
 
-The dataset has 150 records and five attributes: sepal length, sepal width, petal length, petal width and species. All measurments recorded in centimeters
+The dataset has 150 records and five attributes: sepal length, sepal width, petal length, petal width and species. All measurements recorded in centimetres
 
 <img src="https://user-images.githubusercontent.com/123666667/237952015-0c6e7a12-d030-423f-83c2-50c0ed28b49e.png" width="400" height="150"/>
 
@@ -52,7 +52,7 @@ Each of three represented species (Setosa, Virginica and Versicolor) has same nu
 
 ## Analysis
 ##### [2, 7, 8, 9]
-In this project we use Python to analyse Iris dataset. A few libraryes were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
+In this project we use Python to analyse Iris dataset. A few libraries were used for this analysis and data visualization: pandas, numpy, matplotlib.pyplot, seaborn.
 
  
 ###     1 Summary of each variable (*saved to a single text file*)
@@ -62,13 +62,13 @@ In this project we use Python to analyse Iris dataset. A few libraryes were used
 
 Here we can see following values of each variable in dataset:
 
-number of rows- how many enties variable has;
+number of rows- how many entries variable has;
 
 mean -average value of variable;
 
-standard deviation -typical distance between each point and mean- the smaler number the more consistent dataset;
+standard deviation -typical distance between each point and mean- the smaller number the more consistent dataset;
 
-minimum - smalest value;
+minimum - smallest value;
 
 25%, 50% (median), 75% - values on positions corresponding to lower quarter, middle and upper quarter;
 
@@ -77,11 +77,11 @@ maximum - largest value.
 
 ###     2 Histogram of each variable (*saved to png file*) 
 ##### [5, 6]
-Histogram visualise how often each value appearse in a dataset
+Histogram visualise how often each value appears in a dataset
 
 <img src="https://user-images.githubusercontent.com/123666667/237216112-3450d9b2-6084-4f75-bacb-abc92d5017c3.png" width="400" height="400"/>
 
-We can see that there is an overlap between species in sepal measurements. Petal measurements a specialy petal length can be used to identify Iris Setosa.
+We can see that there is an overlap between species in sepal measurements. Petal measurements a specially petal length can be used to identify Iris Setosa.
 
  
 ###     3 Scatter plot of each pair of variables
@@ -90,12 +90,12 @@ Scatter plot visualise relationship between two variables.
 
 <img src="https://user-images.githubusercontent.com/123666667/237209230-f863ab0a-ee60-4a3b-818f-ea6cec3bad92.png" width="400" height="400"/>
 
-Here again we can confirm that petal measurements are seutible for separating Iris Setosa from other two species. Also it is possible to classify Iris Virginica and Iris Versicolor basd in petal size but with some lever of overlaping. 
+Here again we can confirm that petal measurements are suitable for separating Iris Setosa from other two species. Also it is possible to classify Iris Virginica and Iris Versicolor based on petal size but with some lever of overlapping. 
 #
 ###     4 Heatmap correlation coefficient of each pair of variables
 
 Heatmap is way of visualising a correlation coefficient between two variables.
-It is value betwen 1 and -1
+It is value between 1 and -1
 
 1 is perfect positive correlation (as one variable increases the other one will increase too)
 
@@ -106,20 +106,23 @@ It is value betwen 1 and -1
 
 
 Here is an example how you can jump to a wrong conclusion if you don't know the structure of your dataset.
-Looking at the heatmap of full Iris data set we can see negative correlation between some pairs of variables. We can say that for example if petal length is increasing sepal width sould decrees as correlation index is -0.42.
-but if you look at the heatmap of each species separatly there is no negative correlation at all. Each measurement will increas if one of the is increasing. Not all of them at the same rate.
+Looking at the heatmap of full Iris data set we can see negative correlation between some pairs of variables. We can say that for example if petal length is increasing sepal width should decrees as correlation index is -0.42.
+but if you look at the heatmap of each species separately there is no negative correlation at all. Each measurement will increase if one of the others is increasing. Not all of them at the same rate.
 
-It is easier to understand how three positive values from each subset become a negative in a whole set if you look at the scatter plot of pairs of variables where you can notice different dinamycs in subsets and a set.
+It is easier to understand how three positive values from each subset become a negative in a whole set if you look at the scatter plot of pairs of variables where you can notice different dynamics in subsets and a set.
 
 
 ###     5 Box Plot 
-Box-and-whisker plot is visualising statistical summary of each variable. The box represents middle 50% of score- beween 25% and 75%. the line in the box- median value. The whiskers-lower 25% and upper 25%. Outliers- data points set far from the central values.
+Box-and-whisker plot is visualising statistical summary of each variable. The box represents middle 50% of score- between 25% and 75%. the line in the box- median value. The whiskers-lower 25% and upper 25%. Outliers- data points set far from the central values.
 
 <img src="https://user-images.githubusercontent.com/123666667/237213422-71967bb4-6f81-4d63-94cd-9062efc90904.png" width="400" height="400"/>
 
-It is very clear from this plot that Iris Virginica is largest of three species exept one measurement-sepal width.
+It is very clear from this plot that Iris Virginica is largest of three species except one measurement-sepal width. Iris Setosa on the other hand is the smallest of three but has the widest sepal.
 
 ## Conclusion
+Analyses performed on Iris data set in this project allow as to say that in any given dataset results from its subsets can be significantly different from results of full set. Therefore, it is important to check all possible combination before making any prognosis or recommendations based on data. 
+
+For the porpoise of classification of Iris flowers most useful proved to be petal measurements. We can confidently separate Iris Setosa. Using petal width, it is possible with some degree of accuracy to identify Iris Virginica and Iris Versicolor with just the biggest samples of Versicolor and smallest of Virginica overlapping.
 
 
 # References
